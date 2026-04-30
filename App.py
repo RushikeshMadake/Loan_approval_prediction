@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle as pk
 
-# ---------------- PAGE CONFIG ---------------- #
+
 st.set_page_config(page_title="SBI Loan Predictor", page_icon="🏦", layout="centered")
 
 st.markdown("""
@@ -58,7 +58,6 @@ h1, h2, h3 {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- MAIN APP ---------------- #
 
 model = pk.load(open("model.pkl", "rb"))
 scaler = pk.load(open("scaler.pkl", "rb"))
